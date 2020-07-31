@@ -49,6 +49,9 @@ module.exports = {
 	        { from: `${PATHS.src}/${PATHS.assets}images`, to: `${PATHS.assets}images` },
 	      ],
 	    }),
-	    new HtmlWebpackPlugin()
+	    new HtmlWebpackPlugin({
+	      template: `${PATHS.src}/index.html`,
+	      filename: './index.html'
+	    })
 	  ],
 };
