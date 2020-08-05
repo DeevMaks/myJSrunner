@@ -1,11 +1,11 @@
 class Actor {
 	constructor (position, speed) {
 		this.position = position;
-		this.speed = speed; // 100
+		this.speed = speed;
 	}
 
 	calc (diffTime) {
-		const newPosition = this.speed * diffTime;
+		const newPosition = this.speed * diffTime + this.position.x;
 		this.position.x = newPosition;
 	}
 
@@ -18,6 +18,12 @@ class Actor {
 		canvas.fillStyle = 'tomato';
   		canvas.fillRect(x, y, w, h);
 	}
+
+	set x (x) {
+		this.position.x = x;
+	}
+
+
 }
 
 

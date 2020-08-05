@@ -8,7 +8,6 @@ class Scene {
 		this.actors = actors;
 		this.canvas = canvas;
 		this.startTime = null;
-
 		this.frame = this.frame.bind(this);
 	}
 
@@ -50,8 +49,10 @@ class Scene {
 	}
 
 	frame (time) {
+		if (time === undefined) time = 0;
 		if(!this.startTime) this.startTime = time;
 		const diffTime = time - this.startTime;
+		this.startTime = time;
 		this.clearFrame();
 		this.render();
 		this.calc(diffTime);
