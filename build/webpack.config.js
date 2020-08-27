@@ -33,7 +33,7 @@ module.exports = {
 			{
 				test: /\.js$/,
 	      		exclude: [ /(node_modules|dist)/, ],
-	      		loader: 'eslint-loader',
+	      		use: ['eslint-loader', 'babel-loader'],
       		},
       		{
 		      test: /\.(png|jpe?g|gif|svg|webp)$/i,
