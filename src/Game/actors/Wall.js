@@ -6,6 +6,16 @@ class Wall extends Actor {
     constructor(canvas) {
         super(canvas);
     }
+
+    render() {
+        const [x, y] = this.position;
+        this.canvas.fillRect(x, y, 20, -50);
+        console.log('position', x, y);
+    }
+
+    calc() {
+        
+    }
 }
 
 export default Wall;
